@@ -61,7 +61,7 @@ buildings <- x$osm_polygons %>%
 summary(buildings$start_date)
 ```
 
-```{.output}
+```output
    Length     Class      Mode 
     10625 character character 
 ```
@@ -104,7 +104,7 @@ distance <- 100 # in meters
 st_crs(old_buildings)
 ```
 
-```{.output}
+```output
 Coordinate Reference System:
   User input: EPSG:28992 
   wkt:
@@ -316,7 +316,7 @@ single_buffer$area <- sf::st_area(single_buffer)  %>%
   units::set_units(., km^2)
 ```
 
-```{.error}
+```error
 Error in st_area.sfc(st_geometry(x), ...): package lwgeom required, please install it first
 ```
 
@@ -324,7 +324,7 @@ Error in st_area.sfc(st_geometry(x), ...): package lwgeom required, please insta
 single_buffer$old_buildings_per_km2 <- as.numeric(single_buffer$n_buildings / single_buffer$area)
 ```
 
-```{.error}
+```error
 Error in `[[<-.data.frame`(`*tmp*`, i, value = numeric(0)): replacement has 0 rows, data has 159
 ```
 
@@ -339,7 +339,7 @@ Error in `[[<-.data.frame`(`*tmp*`, i, value = numeric(0)): replacement has 0 ro
                         option = "B") 
 ```
 
-```{.error}
+```error
 Error in `geom_sf()`:
 ! Problem while computing aesthetics.
 ℹ Error occurred in the 2nd layer.
